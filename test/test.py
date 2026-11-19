@@ -36,7 +36,7 @@ async def multiply(dut, a, b):
 @cocotb.test()
 async def test_project(dut):
     dut._log.info("Start")
-    cocotb.start_soon(Clock(dut.clk, 20, unit="ns").start())   # 50 MHz
+    cocotb.start_soon(Clock(dut.clk, 40, unit="ns").start())   # 25 MHz (clock_hz)
 
     dut.ena.value = 1
     dut.ui_in.value = 0
