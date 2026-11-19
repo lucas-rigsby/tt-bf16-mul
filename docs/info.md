@@ -1,20 +1,11 @@
-<!---
-
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
-
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
-
 ## How it works
 
-Explain how your project works
+How it works: a bfloat16 multiplier that rounds toward zero and flushes subnormal inputs to zero.
 
 ## How to test
 
-Explain how to use your project
+How to test: load four bytes on ui_in with uio[0]=1, in the order a[15:8], a[7:0], b[15:8], b[7:0]. Wait one clock, then read uo_out with uio[1]=0 for p[7:0] and uio[1]=1 for p[15:8]. Example: 0x3FC0 * 0x4000 (1.5 * 2.0) gives 0x4040 (3.0).
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+None.
