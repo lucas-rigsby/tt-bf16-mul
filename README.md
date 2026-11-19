@@ -89,7 +89,7 @@ The `test` workflow runs the RTL simulation on every push, and the `gl_test` job
 the post-layout netlist after the `gds` workflow hardens the design. Requirements: Icarus
 Verilog and the packages in `test/requirements.txt` (cocotb, pytest, numpy).
 
-## Results (gds run on commit 9d1e6b2)
+## Results
 
 | | |
 |---|---|
@@ -100,9 +100,9 @@ Verilog and the packages in `test/requirements.txt` (cocotb, pytest, numpy).
 | Sign-off checks | DRC (Magic, KLayout) 0, LVS 0, antenna 0, latches 0; precheck and gate-level test pass |
 
 Before this repository, the design was also checked with Verilator lint, cocotb simulation,
-100% code coverage, mutation testing (44/44 injected bugs caught), an ECP5 FPGA build (111 MHz),
-and a SymbiYosys formal proof over all 2^32 input pairs of commutativity, the sign rule, ×1.0
-and ×−1.0, zero inputs, and that the output is never subnormal, Inf or NaN.
+100% code coverage, mutation testing, an ECP5 FPGA build (111 MHz),
+and a SymbiYosys formal proof over all 2^32 input pairs of commutativity, the sign rule, x1.0
+and x−1.0, zero inputs, and that the output is never subnormal, Inf or NaN.
 
 ## Repository layout
 
